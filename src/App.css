@@ -79,3 +79,8 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.progress-bar{
+  height: 2px;
+  background: var(--clr-secondary);
+}
