@@ -3,12 +3,12 @@ import "firebase/compat/storage"; //firebase sdk
 import "firebase/compat/firestore"; //firestore db sdk
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDXoBx3pFAluMjgK7gjF_tFHDhoC5I9H_0",
-  authDomain: "instant-gallery.firebaseapp.com",
-  projectId: "instant-gallery",
-  storageBucket: "instant-gallery.appspot.com",
-  messagingSenderId: "1071989628142",
-  appId: "1:1071989628142:web:d5eda1fe75e7433b3027ff",
+  apiKey: "AIzaSyC-UQDsaGEch4HQHTUWy0-a8VL00T5B1mw",
+  authDomain: "i-gallery-cda84.firebaseapp.com",
+  projectId: "i-gallery-cda84",
+  storageBucket: "i-gallery-cda84.appspot.com",
+  messagingSenderId: "421349885465",
+  appId: "1:421349885465:web:dcf556f13293377dad4c88"
 };
 
 // Initialize Firebase

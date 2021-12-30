@@ -1,8 +1,8 @@
 import "./App.css";
 import { NavBar } from "./components/NavBar";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import HomePage from "./components/HomePage";
-import { GalleryPage } from "./components/GalleryPage";
+import HomePage from "./pages/HomePage";
+import { GalleryPage } from "./pages/GalleryPage";
 
 function App() {
   return (

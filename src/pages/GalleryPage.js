@@ -1,6 +1,6 @@
 import React from "react";
-import { Title } from "./Title";
-import UploadForm from "./UploadForm";
+import { Title } from "../components/Title";
+import UploadForm from "../components/UploadForm";
 
 export const GalleryPage = () => {
   return (
