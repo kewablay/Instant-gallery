@@ -25,7 +25,7 @@ function UploadForm() {
         <input type="file" onChange={changeHandler} />
         <div className="output">
           {error && <div>{error}</div>}
-          {file && <div>{file.name}</div>}
+          {/* {file && <div>{file.name}</div>} */}
           {file && <ProgressBar file={file} setFile={setFile}/>} 
         </div>
       </form>
