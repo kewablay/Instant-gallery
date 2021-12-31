@@ -8,15 +8,16 @@ const useFirestore = (collection) => {
     const unsub = projectFirestore
       .collection(collection)
       .orderBy("createdAt", "desc")
-      .onSnapshot((images) => {
+      .onSnapshot((snap) => {
         let documents = [];
-        images.forEach((image) => {
-          documents.push({ ...image.data(), id: image.id });
-          setDocs(documents);
+        snap.forEach((doc) => {
+          documents.push({ ...doc.data(), id: doc.id });
         });
-
-        return () => unsub();
+        setDocs(documents);
       });
+
+    //   cleanup function
+    return () => unsub();
   }, [collection]);
 
   return { docs };

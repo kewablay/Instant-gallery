@@ -9,7 +9,7 @@ const useStorage = (file) => {
   useEffect(() => {
     //references
     const storageRef = projectStorage.ref(file.name);
-    const collectionRef = projectFirestore.collection('pictures')
+    const collectionRef = projectFirestore.collection('images')
 
     storageRef.put(file).on(
       "state_changed",
