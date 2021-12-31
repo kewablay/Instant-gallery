@@ -83,8 +83,10 @@
 .upload-form{
   margin-bottom: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; 
+  width: 100%;
 }
 .upload-form input{
   margin-left: 6%;
@@ -92,7 +94,6 @@
 .progress-bar {
   height: 2px;
   background: var(--clr-secondary);
-  
 }
 
 .image-grid {
@@ -113,7 +114,7 @@ opacity: 0.8;
 .image-container img {
   /* min-width: 100%;
   min-height: 100%;
-  max-width: 150%; */
+  max-width: 150%; */      
   width: 100%;
   height: 100%;
 }
@@ -124,3 +125,22 @@ opacity: 0.8;
   justify-content: center;
   align-items: center;
 }
+
+  .backdrop{
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .backdrop img{
+    display: block; 
+    max-width: 60%;
+    max-height: 80%;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    border: 2px solid white;
+    margin: 4rem auto; 
+    z-index: 1;
+  }
