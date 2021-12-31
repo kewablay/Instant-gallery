@@ -1,13 +1,26 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import useFireStore from "../hooks/useFirestore";
 import { motion } from "framer-motion";
 
 function ImageGrid({ setSelectedImg }) {
   const { docs } = useFireStore("images");
-  console.log("Docs", docs);
+  const [containerEmpty, setContainerEmpty] = useState(true)
+  // console.log("Docs", docs);
+  
+
+  const checkImgContainer = ()=> {
+    let imgContainer = document.querySelector(".image-grid");
+    if (imgContainer !== null) {
+      setContainerEmpty(false);
+    }
+  }
+  useEffect(() => {
+    checkImgContainer()
+  }, [docs])
 
   return (
     <div className="image-grid-container">
+      {containerEmpty && (<div className="loading">Loading....</div>)}
       <div className="image-grid">
         {docs &&
           docs.map((doc) => (
